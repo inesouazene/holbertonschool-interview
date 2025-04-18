@@ -9,8 +9,7 @@ def canUnlockAll(boxes):
     Determines if all boxes can be opened.
 
     Args:
-        boxes (list of lists): A list containing lists representing locked boxes.
-                             Each box may contain keys to other boxes.
+        boxes (list of lists)
 
     Returns:
         bool: True if all boxes can be opened, else False.
@@ -32,8 +31,8 @@ def canUnlockAll(boxes):
     # Process keys until we can't unlock any more boxes
     while keys_to_check:
         current_key = keys_to_check.pop()
-        
-        # Check if the key is valid and opens a new box
+
+    # Check if the key is valid and opens a new box
         if 0 <= current_key < n and not unlocked[current_key]:
             unlocked[current_key] = True
             # Add new keys from the recently unlocked box
